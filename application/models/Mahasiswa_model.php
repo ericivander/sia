@@ -13,4 +13,14 @@ class Mahasiswa extends MY_Model {
 			'Riwayat_pelatihan'=> array( 'primary_key' => 'nrp' ),
 			'Riwayat_pendidikan'=> array( 'primary_key' => 'nrp' )
 		);
+
+	/* Create data mahasiswa */
+	public function create($data, $skip_validation = TRUE, $return = TRUE){
+
+	}
+
+	/* Update data mahasiswa*/
+	public function updateData($primary_value, $data, $skip_validation = TRUE){
+		
+	}
 }
