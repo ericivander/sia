@@ -2,7 +2,7 @@
 
 (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-class APP_Controller extends CI_Controller {
+class MY_Controller extends CI_Controller {
 
     protected $defaultModel;
     protected $class;
@@ -25,15 +25,19 @@ class APP_Controller extends CI_Controller {
     }
 
     private function loadDefaultModel() {
-        if (empty($this->defaultModel)) {
+        if (empty($this->defaultModel)) {   
             $defaultModel = ucfirst($this->class) . '_model';
+            
         } else {
             $defaultModel = $this->defaultModel;
         }
+        var_dump(APPPATH . 'models/' . $defaultModel . EXT);
+        var_dump($defaultModel);
         if (file_exists(APPPATH . 'models/' . $defaultModel . EXT)) {
             $this->load->model($defaultModel);
             $this->model = new $defaultModel();
         }
+        die(var_dump($this->model));
     }
 
 }

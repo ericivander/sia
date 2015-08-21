@@ -21,6 +21,17 @@ class Mahasiswa extends MY_Model {
 
 	/* Update data mahasiswa*/
 	public function updateData($primary_value, $data, $skip_validation = TRUE){
-		
+
+	}
+
+	/* Get data mahasiswa*/
+	public function getmahasiswa($id){
+		$data = $this->get_by($this->primary_key,$id); //return object
+		return $data;
+	}
+
+	/* Get all data mahasiswa*/
+	public function getAllList(){
+
 	}
 }

@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Site extends APP_Controller {
+class Site extends MY_Controller {
 	// load halaman view
 	public function login(){
 		$user = array();
